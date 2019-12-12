@@ -1,0 +1,21 @@
+{
+    "kind": "BuildConfig",
+    "apiVersion": "build.openshift.io/v1",
+    "metadata": {
+        "name": "custom-pipeline"
+    },
+    "spec": {
+        "source": {
+            "type": "Git",
+            "git": {
+                "uri": "https://github.com/anandpavithran/myjenkins",
+        }
+},
+        "strategy": {
+            "type": "JenkinsPipeline",
+            "jenkinsPipelineStrategy": {
+                "jenkinsfilePath": "jenkins/Jenkinsfile"
+            }
+        }
+    }
+}
